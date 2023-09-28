@@ -5,14 +5,14 @@ import AnimatedLetters from "../AnimatedLetters";
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
-    const nameArray = ['E', 'r', 'i', 'c', 'h'];
+    const nameArray = ['E', 'r', 'i', 'c', 'h', '!'];
     const jobArray = ['F', 'u', 'l', 'l', ' ', 'S', 't', 'a', 'c', 'k', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'];
 
     return (
         <div className="container home-page">
             <div className="text-zone">
                 <h1>
-                    <span className={letterClass}>H</span>
+                    <span className={`${letterClass} _11`}>H</span>
                     <span className={`${letterClass} _12`}>i,</span>
                     <br />
                     <span className={`${letterClass} _13`}>I</span>
