@@ -11,7 +11,12 @@ const Home = () => {
     return (
         <div className="container home-page">
             <div className="text-zone">
-                <h1>Greetings traveler,<br /> I'm&nbsp;
+                <h1>
+                    <span className={letterClass}>H</span>
+                    <span className={`${letterClass} _12`}>i,</span>
+                    <br />
+                    <span className={`${letterClass} _13`}>I</span>
+                    <span className={`${letterClass} _14`}>'m</span>&nbsp;
                     <AnimatedLetters 
                         letterClass={letterClass}
                         strArray={nameArray}
@@ -21,7 +26,7 @@ const Home = () => {
                     <AnimatedLetters 
                         letterClass={letterClass}
                         strArray={jobArray}
-                        index={15}
+                        index={16}
                     />
                     <br />
                 </h1>
