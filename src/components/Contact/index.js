@@ -1,17 +1,40 @@
 import Loader from 'react-loaders';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
+    const refForm = useRef();
 
     useEffect(() => {
         setTimeout(() => {
             return setLetterClass('text-animate-hover');
         }, 3000)
     }, []);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_o4ow2hj',
+                'template_cygz78p',
+                refForm.current,
+                'kA9CyJpdjLAU8L9iz'
+            )
+            .then(
+                () => {
+                    alert('Message successfully sent!');
+                    window.location.reload(false);
+                },
+                () => {
+                    alert('Failed to send the message, please try again.');
+                }
+            )
+    }
     
     return (
         <>
@@ -34,9 +57,10 @@ const Contact = () => {
                         Feel free to connect with me on &nbsp;
                         <a href="https://www.linkedin.com/in/erichengler">LinkedIn</a>
                         &nbsp; or send an email using the form below.
+                        Thank you for your time!
                     </p>
                     <div className='contact-form'>
-                        <form>
+                        <form ref={refForm} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
                                     <input 
@@ -48,9 +72,9 @@ const Contact = () => {
                                 </li>
                                 <li className='half'>
                                     <input 
+                                        placeholder='Email'
                                         type='email' 
-                                        name='email' 
-                                        placeholder='Email' 
+                                        name='email'  
                                         required 
                                     />
                                 </li>
