@@ -2,6 +2,9 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    // Not sure about these, but resizing window breaks it without them
+    max-width: 1200px;
+    min-width: 1200px;
 }
 
 .top-tags {
