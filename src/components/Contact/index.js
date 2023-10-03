@@ -24,6 +24,14 @@ const Contact = () => {
                             index={15}
                         />
                     </h1>
+                    <p>
+                        I am currently located in the Minneapolis-St. Paul
+                        area and am searching for opportunities around there.
+                        I'm also open to remote work or relocating, depending on the
+                        circumstances. Feel free to connect with me on &nbsp;
+                        <a href="https://www.linkedin.com/in/erichengler">LinkedIn</a>
+                        &nbsp; or send an email using the form below.
+                    </p>
                 </div>
             </div>
             <Loader type="pacman" />
