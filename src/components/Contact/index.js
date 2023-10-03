@@ -28,10 +28,57 @@ const Contact = () => {
                         I am currently located in the Minneapolis-St. Paul
                         area and am searching for opportunities around there.
                         I'm also open to remote work or relocating, depending on the
-                        circumstances. Feel free to connect with me on &nbsp;
+                        circumstances.
+                    </p>
+                    <p>
+                        Feel free to connect with me on &nbsp;
                         <a href="https://www.linkedin.com/in/erichengler">LinkedIn</a>
                         &nbsp; or send an email using the form below.
                     </p>
+                    <div className='contact-form'>
+                        <form>
+                            <ul>
+                                <li className='half'>
+                                    <input 
+                                        type='text' 
+                                        name='name' 
+                                        placeholder='Name' 
+                                        required 
+                                    />
+                                </li>
+                                <li className='half'>
+                                    <input 
+                                        type='email' 
+                                        name='email' 
+                                        placeholder='Email' 
+                                        required 
+                                    />
+                                </li>
+                                <li>
+                                    <input 
+                                        placeholder="Subject" 
+                                        type="text" 
+                                        name="subject" 
+                                        required 
+                                    />
+                                </li>
+                                <li>
+                                    <textarea 
+                                        placeholder="Message" 
+                                        name="message" 
+                                        required 
+                                    />
+                                </li>
+                                <li>
+                                    <input 
+                                        type="submit" 
+                                        className='flat-button' 
+                                        value="SEND" 
+                                    />
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
             </div>
             <Loader type="pacman" />
