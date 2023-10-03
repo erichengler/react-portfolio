@@ -25,7 +25,7 @@ const About = () => {
                     </h1>
                     <p>
                         I'm an ambitious full-stack developer looking for a role in the
-                        tech industry! I'm looking for a company with a transparent
+                        tech industry! I'm searching for a company with a transparent
                         culture and a challenging work environment where I can grow.
                     </p>
                     <p>
